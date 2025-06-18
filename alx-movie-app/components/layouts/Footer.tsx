@@ -15,6 +15,33 @@ const Footer: React.FC = () => {
         <h2 className="text-xl md:text-4xl font-semibold mb-4 md:mb-0">
           Cine<span className="text-[#E2D609]">Seek</span>
         </h2>
+
+        <nav className="flex-1 flex justify-center space-x-6 mb-4 md:mb-0">
+          <Link
+            href="/"
+            className="text-[#E2D609] text-lg transition-colors duration-300"
+          >
+            Home
+          </Link>
+          <Link
+            href="/movies"
+            className="text-[#E2D609] text-lg transition-colors duration-300"
+          >
+            Movies
+          </Link>
+          <Link
+            href="/contact"
+            className="text-[#E2D609] text-lg transition-colors duration-300"
+          >
+            Contact
+          </Link>
+          <Link
+            href="/privacy"
+            className="text-[#E2D609] text-lg transition-colors duration-300"
+          >
+            Privacy Policy
+          </Link>
+        </nav>
       </div>
     </footer>
   );
