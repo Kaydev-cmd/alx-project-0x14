@@ -1,5 +1,6 @@
 import Button from "@/components/commons/Button";
 import { useRouter } from "next/router";
+import { BACKGROUND_IMAGE } from "@/constants";
 
 const Home = () => {
   const router = useRouter();
@@ -9,7 +10,7 @@ const Home = () => {
       <section
         className="h-screen bg-cover bg-center"
         style={{
-          backgroundImage: "url('/assets/background.jpg')",
+          backgroundImage: `url(${BACKGROUND_IMAGE})`,
         }}
       >
         <div className="bg-black bg-opacity-50 h-full flex flex-col justify-center items-center text-center">
