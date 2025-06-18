@@ -42,7 +42,6 @@ const Footer: React.FC = () => {
             Privacy Policy
           </Link>
         </nav>
-
         <div className="flex space-x-4">
           <a
             href="https://twitter.com"
@@ -70,7 +69,7 @@ const Footer: React.FC = () => {
           </a>
         </div>
 
-        <div className="mt-8 text-center text-sm text-gray-400">
+        <div className="mt-12 text-center text-sm text-gray-400">
           <p>&copy; 2024 CineSeek. All rights reserved.</p>
         </div>
       </div>

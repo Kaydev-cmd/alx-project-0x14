@@ -9,8 +9,7 @@ const Home = () => {
       <section
         className="h-screen bg-cover bg-center"
         style={{
-          backgroundImage:
-            "url('/assets/background.jpg')",
+          backgroundImage: "url('/assets/background.jpg')",
         }}
       >
         <div className="bg-black bg-opacity-50 h-full flex flex-col justify-center items-center text-center">
