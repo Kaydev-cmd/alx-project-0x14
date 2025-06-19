@@ -38,6 +38,10 @@ const Movies: React.FC<Mprops> = () => {
     setLoading(false);
   }, [page, year, genre]);
 
+  useEffect(() => {
+    fetchMovies();
+  }, [fetchMovies]);
+
   return <div>Movies</div>;
 };
 
