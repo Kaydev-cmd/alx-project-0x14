@@ -25,7 +25,18 @@ const Movies: React.FC<Mprops> = () => {
         "Content-Type": "application/json; charset=utf-8",
       },
     });
-  }, []);
+
+    if (!response.ok) {
+      setLoading(false);
+      throw new Error("Something went wrong");
+    }
+
+    const data = await response.json();
+    const results = data.movies;
+    console.log(results);
+    setMovies(results);
+    setLoading(false);
+  }, [page, year, genre]);
 
   return <div>Movies</div>;
 };
