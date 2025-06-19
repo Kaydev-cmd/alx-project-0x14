@@ -6,5 +6,11 @@ export interface ComponentProps {
 
 export interface ButtonProps {
   title: string;
-  action?: () => void
+  action?: () => void;
+}
+
+export interface MovieProps {
+  title: string;
+  posterImage: string;
+  releaseYear: number;
 }
