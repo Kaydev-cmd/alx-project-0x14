@@ -23,3 +23,7 @@ export interface Mprops {
 export interface PrimaryImage {
   url: string;
 }
+
+export interface TitleText {
+  text: string;
+}
