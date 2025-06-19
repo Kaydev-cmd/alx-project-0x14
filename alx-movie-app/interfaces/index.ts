@@ -20,14 +20,21 @@ export interface Mprops {
   movies: MovieProps[];
 }
 
-export interface PrimaryImage {
+interface PrimaryImage {
   url: string;
 }
 
-export interface TitleText {
+interface TitleText {
   text: string;
 }
 
-export interface ReleaseYear {
+interface ReleaseYear {
   year: string;
+}
+
+export interface MoviesProps {
+  id: string;
+  primaryImage: PrimaryImage;
+  titleText: TitleText;
+  releaseYear: ReleaseYear;
 }
