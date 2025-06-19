@@ -66,8 +66,23 @@ const Movies: React.FC<Mprops> = () => {
             ))}
           </select>
         </div>
-
-        
+        <p className="text-[#E2D609] text-xl m-6">Online streaming</p>
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          <h1 className="text-lg md:text-6xl font-bold">
+            {year} {genre} Movie List
+          </h1>
+          <div className="flex flex-wrap space-x-0 md:space-x-4 mt-4 md:mt-0">
+            {["All", "Animation", "Comedy", "Fantasy"].map(
+              (genre: string, key: number) => (
+                <Button
+                  title={genre}
+                  key={key}
+                  action={() => setGenre(genre)}
+                />
+              )
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );
