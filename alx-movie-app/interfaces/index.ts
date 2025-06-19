@@ -27,3 +27,7 @@ export interface PrimaryImage {
 export interface TitleText {
   text: string;
 }
+
+export interface ReleaseYear {
+  year: string;
+}
