@@ -15,9 +15,8 @@ export interface MovieProps {
   posterImage: string;
   releaseYear: string;
 }
-
 export interface Mprops {
-  movies: MovieProps[];
+  movies: MoviesProps[];
 }
 
 interface PrimaryImage {
@@ -38,3 +37,4 @@ export interface MoviesProps {
   titleText: TitleText;
   releaseYear: ReleaseYear;
 }
+

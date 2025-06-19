@@ -2,13 +2,13 @@ import React, { useCallback, useEffect, useState } from "react";
 import Button from "@/components/commons/Button";
 import Loading from "@/components/commons/Loading";
 import MovieCard from "@/components/commons/MovieCard";
-import { MovieProps, Mprops } from "@/interfaces";
+import { MoviesProps, Mprops } from "@/interfaces";
 
 const Movies: React.FC<Mprops> = () => {
   const [page, setPage] = useState<number>(1);
   const [year, setYear] = useState<number | null>(null);
   const [genre, setGenre] = useState<string>("All");
-  const [movies, setMovies] = useState<MovieProps[]>([]);
+  const [movies, setMovies] = useState<MoviesProps[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
   const fetchMovies = useCallback(async () => {
@@ -83,7 +83,26 @@ const Movies: React.FC<Mprops> = () => {
             )}
           </div>
         </div>
+        {/* Movies Output */}
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 mt-10">
+          {movies?.map((movie: MoviesProps, key: number) => (
+            <MovieCard
+              title={movie?.titleText.text}
+              posterImage={movie?.primaryImage?.url}
+              releaseYear={movie?.releaseYear.year}
+              key={key}
+            />
+          ))}
+        </div>
+        <div className="flex justify-end space-x-4 mt-6">
+          <Button
+            title="Previous"
+            action={() => setPage((prev) => (prev > 1 ? prev - 1 : 1))}
+          />
+          <Button title="Next" action={() => setPage(page + 1)} />
+        </div>
       </div>
+      {loading && <Loading />}
     </div>
   );
 };
