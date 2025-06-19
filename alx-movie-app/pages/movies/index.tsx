@@ -58,9 +58,11 @@ const Movies: React.FC<Mprops> = () => {
             }
             className="border-2 border-[#E2D609] outline-none bg-transparent px-4 md:px-8 py-2 mt-4 md:mt-0 rounded-full w-full md:w-auto"
           >
-            <option value="">Select Year</option>
+            <option value="" className="bg-[#110f17]">
+              Select Year
+            </option>
             {[2024, 2023, 2022, 2021, 2020, 2019].map((year: number) => (
-              <option value={year} key={year}>
+              <option value={year} key={year} className="bg-[#110f17]">
                 {year}
               </option>
             ))}
