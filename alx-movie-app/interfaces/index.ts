@@ -10,7 +10,12 @@ export interface ButtonProps {
 }
 
 export interface MovieProps {
+  id?: string
   title: string;
   posterImage: string;
-  releaseYear: number;
+  releaseYear: string;
+}
+
+export interface Mprops {
+  movies: MovieProps[];
 }
