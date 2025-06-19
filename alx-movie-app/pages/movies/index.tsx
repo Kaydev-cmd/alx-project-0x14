@@ -11,6 +11,22 @@ const Movies: React.FC<Mprops> = () => {
   const [movies, setMovies] = useState<MovieProps[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
+  const fetchMovies = useCallback(async () => {
+    setLoading(true);
+
+    const response = await fetch("/api/fetch-movies", {
+      method: "POST",
+      body: JSON.stringify({
+        page,
+        year,
+        genre: genre === "All" ? "" : genre,
+      }),
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+    });
+  }, []);
+
   return <div>Movies</div>;
 };
 
