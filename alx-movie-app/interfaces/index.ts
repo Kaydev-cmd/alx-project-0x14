@@ -10,7 +10,7 @@ export interface ButtonProps {
 }
 
 export interface MovieProps {
-  id?: string
+  id?: string;
   title: string;
   posterImage: string;
   releaseYear: string;
@@ -18,4 +18,8 @@ export interface MovieProps {
 
 export interface Mprops {
   movies: MovieProps[];
+}
+
+export interface PrimaryImage {
+  url: string;
 }
